@@ -3,13 +3,13 @@
 	"id": "notify",
 	"version": "${version}",
 	"name": "Notify",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This is a mod that is used to make Dynamic Notes and To-Do lists!",
 	"authors": [
-		"Me!"
+		"Benjammin Gerresheim & Liam Bruno"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://benjishomelab.ddns.net/",
+		"sources": "https://github.com/McBenjihood/notify"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/notify/icon.png",
