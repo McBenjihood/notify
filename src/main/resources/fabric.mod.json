@@ -1,14 +1,14 @@
 {
 	"schemaVersion": 1,
 	"id": "notify",
-	"version": "${version}",
+	"version": "1.0.0",
 	"name": "Notify",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "With Notify, you can make Notes in Minecraft",
 	"authors": [
-		"Me!"
+		"Benjamin Gerresheim & Liam Bruno"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
+		"homepage": "https://benjishomelab.ddns.net/index.html",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
