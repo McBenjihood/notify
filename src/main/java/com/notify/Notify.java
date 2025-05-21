@@ -1,6 +1,4 @@
 package com.notify;
-
-import com.notify.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -13,9 +11,6 @@ public class Notify implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
-
-		ModItems.registerModItems();
 		LOGGER.info("Hello Fabric world!");
 	}
 
