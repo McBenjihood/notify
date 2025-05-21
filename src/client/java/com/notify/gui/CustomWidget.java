@@ -9,7 +9,7 @@ import net.minecraft.text.Text;
 
 public class CustomWidget extends ClickableWidget {
     public CustomWidget(int x, int y, int width, int height) {
-        super(x, y, width, height, Text.literal("My Widget"));
+        super(x, y, width, height, Text.literal("Notify"));
     }
 
     @Override
@@ -28,7 +28,7 @@ public class CustomWidget extends ClickableWidget {
                 MinecraftClient.getInstance().textRenderer,
                 this.getMessage(),
                 getX() + width / 2,
-                getY() + (height - 8) / 2, // Center vertically
+                getY() + (height - 8) / 2,
                 textColor
         );
     }
