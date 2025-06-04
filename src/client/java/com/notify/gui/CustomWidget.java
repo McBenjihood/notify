@@ -1,14 +1,11 @@
-// File: src/client/java/com/notify/gui/CustomWidget.java
 package com.notify.gui;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.gui.screen.Screen; // Keep if any onPressAction needs it
 import net.minecraft.client.gui.widget.ClickableWidget;
 import net.minecraft.client.gui.screen.narration.NarrationMessageBuilder;
 import net.minecraft.client.gui.screen.narration.NarrationPart;
 import net.minecraft.text.Text;
-import net.minecraft.util.math.MathHelper; // For color manipulation if needed
 
 public class CustomWidget extends ClickableWidget {
 

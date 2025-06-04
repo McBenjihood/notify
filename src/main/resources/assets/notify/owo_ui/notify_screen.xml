@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<owo-ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <!-- The schema location is mostly for IDE autocompletion and validation;
+         it might not perfectly match owo-ui's internal schema but helps with writing.
+         The important part is the structure and tags understood by owo-ui. -->
+
+    <root type="flow-layout"> <!-- The root component of our screen will be a FlowLayout -->
+        <configure>
+            <!-- Configure the root FlowLayout -->
+            <direction>vertical</direction> <!-- Arrange children vertically -->
+            <horizontal-alignment>center</horizontal-alignment>
+            <vertical-alignment>top</vertical-alignment>
+            <padding>5</padding> <!-- Padding around the entire screen content -->
+            <surface>vanilla-translucent</surface> <!-- Makes background like vanilla's translucent overlay -->
+        </configure>
+
+        <children>
+            <!-- Title Label -->
+            <label>
+                <text>Notify Mod Screen</text>
+                <margins vertical="5"/>
+                <horizontal-alignment>center</horizontal-alignment>
+            </label>
+
+            <!-- Button to add new text boxes -->
+            <button id="add-text-box-button">
+                <text>+</text>
+                <horizontal-sizing>fixed(20)</horizontal-sizing> <!-- Make button small -->
+                <vertical-sizing>fixed(20)</vertical-sizing>
+                <margins bottom="5"/>
+            </button>
+
+            <!-- Scrollable area for the text boxes -->
+            <scroll direction="vertical" scrollbar-visible="true">
+                <configure>
+                    <horizontal-sizing>fill(90)</horizontal-sizing> <!-- Scroll area takes 90% of parent width -->
+                    <vertical-sizing>fill(80)</vertical-sizing>   <!-- Scroll area takes 80% of parent height -->
+                </configure>
+                <child>
+                    <!-- This FlowLayout will hold the dynamically added text boxes -->
+                    <flow-layout id="text-box-container">
+                        <configure>
+                            <direction>vertical</direction>
+                            <gap>3</gap> <!-- Gap between text boxes -->
+                            <padding>3</padding>
+                            <horizontal-sizing>fill(100)</horizontal-sizing> <!-- Fill its parent (the scroll content area) -->
+                            <vertical-sizing>content</vertical-sizing>      <!-- Height adjusts to content -->
+                        </configure>
+                        <children>
+                            <!-- TextBoxComponents will be added here by Java code -->
+                            <!-- You can add an initial one here for testing if you like:
+                            <text-box max-length="2048" multiline="true">
+                                <suggestion>Initial text box...</suggestion>
+                                <vertical-sizing>fixed(60)</vertical-sizing>
+                            </text-box>
+                            -->
+                        </children>
+                    </flow-layout>
+                </child>
+            </scroll>
+        </children>
+    </root>
+
+    <!-- Optional: Define component templates if you were to reuse complex components often -->
+    <!--
+    <components>
+        <text-box id="my-multi-line-template" max-length="2048" multiline="true">
+            <suggestion>Type here...</suggestion>
+            <vertical-sizing>fixed(60)</vertical-sizing>
+            <margins vertical="2"/>
+        </text-box>
+    </components>
+    -->
+</owo-ui>
